@@ -8,11 +8,14 @@ const Products = ({products, productsA, productsB}) => {
   console.log(user);
   return (
     <div className="products-container">
-        <h1>Product</h1>
+        <h1>{user.nickname.toUpperCase()}</h1>
         <div className="grid wrapper">  
-          {user.nickname === 'storea' && (productsA.data?.map((product) => <Product key={product._id} product={product} /> ))}
-          {user.nickname === 'storeb' && (productsB.data?.map((product) => <Product key={product._id} product={product} /> ))}
-          {user.nickname === 'boss' && (products.data?.map((product) => <Product key={product._id} product={product} /> ))}
+            {user.nickname === 'storea' && (productsA.data?.map((product) => <Product key={product._id} product={product} /> ))}
+            {user.nickname === 'storeb' && (productsB.data?.map((product) => <Product key={product._id} product={product} /> ))}
+            {user.nickname === 'boss' && (products.data?.map((product) => <Product key={product._id} product={product} /> ))}
+            <Link href="/new">
+                <Button primary>Add a new Product</Button>
+            </Link>
         </div>
     </div>
   )

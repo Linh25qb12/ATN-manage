@@ -31,7 +31,7 @@ const NewProduct = () => {
                 },
                 body: JSON.stringify(form)
             })
-            router.push("/");
+            router.push("/product");
         } catch (error) {
             console.log(error);
         }

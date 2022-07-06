@@ -8,8 +8,8 @@ const Index = () => {
     <>
       {user && (
         <div>
-          <Link href="/api/auth/logout">Logout</Link>
-          <Link href="/product">See the product</Link>
+          <h1>You have already logged in</h1>
+          <h3><Link href="/product">See the product</Link></h3>
         </div>
       )}
       {!user && (
