@@ -2,7 +2,9 @@ import React from 'react';
 import Product from '../components/Product';
 import fetch from 'isomorphic-unfetch';
 import {useUser} from '@auth0/nextjs-auth0';
-
+import Link from "next/link";
+import {Button} from 'semantic-ui-react';
+ 
 const Products = ({products, productsA, productsB}) => {
   const {user} = useUser();
   console.log(user);
