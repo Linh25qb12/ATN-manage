@@ -13,7 +13,9 @@ const Index = () => {
         </div>
       )}
       {!user && (
-        <h1>You have to <Link href="/api/auth/login"><a>login</a></Link> to see products</h1>
+        <div className="image-container">
+          <img  src="/image/cute.png" alt="Girl in a jacket" width="500" height="500"></img>
+        </div>
       )}
     </>
     

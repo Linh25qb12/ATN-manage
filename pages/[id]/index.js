@@ -42,9 +42,9 @@ const Product = ({ product }) => {
                 ? <Loader active />
                 :
                 <>
-                    <h1>{product.data.name}</h1>
-                    <p>{product.data.description}</p>
-                    <p>{product.data.quantity}</p>
+                    <h1>Product Name: {product.data.name}</h1>
+                    <p>Product description: {product.data.description}</p>
+                    <p>Product quantity: {product.data.quantity}</p>
                     <Button color='red' onClick={open}>Delete</Button>
                 </>
             }
