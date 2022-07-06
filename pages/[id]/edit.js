@@ -24,7 +24,7 @@ const EditProduct = ({product}) => {
 
     const updateProduct = async () => {
         try {
-            const res = await fetch(`http://localhost:3000/api/products/${router.query.id}`, {
+            const res = await fetch(`https://atn-manage-terminatorxxd.vercel.app/api/products/${router.query.id}`, {
                 method: 'PUT',
                 headers: {
                     "Accept": "application/json",
@@ -114,7 +114,7 @@ const EditProduct = ({product}) => {
 
 
 export const getServerSideProps = async ({ query: { id } }) => {
-    const res = await fetch(`http://localhost:3000/api/products/${id}`);
+    const res = await fetch(`https://atn-manage-terminatorxxd.vercel.app/api/products/${id}`);
     const product = await res.json();
   
     return{

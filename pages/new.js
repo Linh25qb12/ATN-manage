@@ -23,7 +23,7 @@ const NewProduct = () => {
 
     const createProduct = async () => {
         try {
-            const res = await fetch('http://localhost:3000/api/products', {
+            const res = await fetch('https://atn-manage-terminatorxxd.vercel.app/api/products', {
                 method: 'POST',
                 headers: {
                     "Accept": "application/json",

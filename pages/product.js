@@ -19,9 +19,9 @@ const Products = ({products, productsA, productsB}) => {
 }
 
 export const getServerSideProps = async () => {
-  const productsData = await fetch('http://localhost:3000/api/products');
-  const productsAData = await fetch('http://localhost:3000/api/products/storeA');
-  const productsBData = await fetch('http://localhost:3000/api/products/storeB');
+  const productsData = await fetch('https://atn-manage-terminatorxxd.vercel.app/api/products');
+  const productsAData = await fetch('https://atn-manage-terminatorxxd.vercel.app/api/products/storeA');
+  const productsBData = await fetch('https://atn-manage-terminatorxxd.vercel.app/api/products/storeB');
   const products = await productsData.json();
   const productsA = await productsAData.json();
   const productsB = await productsBData.json();

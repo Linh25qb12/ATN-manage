@@ -21,7 +21,7 @@ const Product = ({ product }) => {
     const deleteProduct = async () => {
         const productId = router.query.id;
         try {
-            const deleted = await fetch(`http://localhost:3000/api/products/${productId}`, {
+            const deleted = await fetch(`https://atn-manage-terminatorxxd.vercel.app/api/products/${productId}`, {
                 method: "Delete"
             });
 
@@ -58,7 +58,7 @@ const Product = ({ product }) => {
 }
 
 export const getServerSideProps = async ({ query: { id } }) => {
-    const res = await fetch(`http://localhost:3000/api/products/${id}`);
+    const res = await fetch(`https://atn-manage-terminatorxxd.vercel.app/api/products/${id}`);
     const product = await res.json();
   
     return{
