@@ -1,7 +1,6 @@
 import dbConnect from '../../../utils/dbConnect';
 import Product from '../../../models/Product';
 
-
 dbConnect();
 
 export default async(req, res) => {
@@ -28,5 +27,4 @@ export default async(req, res) => {
             res.status(400).json({success: false});
             break;
     }
-
 }

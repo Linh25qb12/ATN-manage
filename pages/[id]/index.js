@@ -19,13 +19,12 @@ const Product = ({ product }) => {
     const close = () => setConfirm(false);
 
     const deleteProduct = async () => {
-        const productId = router.query.id;
         try {
-            const deleted = await fetch(`https://atn-manage-terminatorxxd.vercel.app/api/products/${productId}`, {
+            const deleted = await fetch(`https://atn-manage-terminatorxxd.vercel.app/api/products/${router.query.id}`, {
                 method: "Delete"
             });
 
-            router.push("/");
+            router.push("/product");
         } catch (error) {
             console.log(error)
         }

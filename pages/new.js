@@ -15,7 +15,7 @@ const NewProduct = () => {
             if (Object.keys(errors).length === 0) {
                 createProduct();
             }
-            else {
+            else {  
                 setIsSubmitting(false);
             }
         }

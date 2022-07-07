@@ -15,6 +15,7 @@ const Products = ({products, productsA, productsB}) => {
             {user.nickname === 'storeb' && (productsB.data?.map((product) => <Product key={product._id} product={product} /> ))}
             {user.nickname === 'boss' && (products.data?.map((product) => <Product key={product._id} product={product} /> ))}
         </div>
+        <br />
         <div className="button-container" >
             <Link href="/new">
                 <Button primary >Add a new Product</Button>

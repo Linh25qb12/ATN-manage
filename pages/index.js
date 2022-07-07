@@ -14,7 +14,7 @@ const Index = () => {
       )}
       {!user && (
         <div className="image-container">
-          <img  src="/image/cute.png" alt="Girl in a jacket" width="500" height="500"></img>
+          <img  src="/image/cute.png" alt="Cute girl with board" width="500" height="500"></img>
         </div>
       )}
     </>

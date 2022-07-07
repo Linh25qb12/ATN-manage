@@ -32,7 +32,7 @@ const EditProduct = ({product}) => {
                 },
                 body: JSON.stringify(form)
             })
-            router.push("/");
+            router.push("/product");
         } catch (error) {
             console.log(error);
         }
@@ -110,8 +110,6 @@ const EditProduct = ({product}) => {
         </div>
     )
 }
-
-
 
 export const getServerSideProps = async ({ query: { id } }) => {
     const res = await fetch(`https://atn-manage-terminatorxxd.vercel.app/api/products/${id}`);
