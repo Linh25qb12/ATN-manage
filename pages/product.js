@@ -11,6 +11,7 @@ const Products = ({products, productsA, productsB}) => {
     <div className="products-container">
         <h1>{user.nickname.toUpperCase()}</h1>
         <div className="grid wrapper">  
+            {!user && <h1>You have to log in to see product.</h1>}
             {user.nickname === 'storea' && (productsA.data?.map((product) => <Product key={product._id} product={product} /> ))}
             {user.nickname === 'storeb' && (productsB.data?.map((product) => <Product key={product._id} product={product} /> ))}
             {user.nickname === 'boss' && (products.data?.map((product) => <Product key={product._id} product={product} /> ))}
