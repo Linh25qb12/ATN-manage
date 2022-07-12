@@ -20,7 +20,7 @@ const Product = ({product: {_id, name, description}}) => {
                 <Link href={`/${_id}`}>
                     <Button primary>View</Button>
                 </Link>
-                {!(user.nickname === boss) && 
+                {!(user.nickname === "boss") && 
                 <Link href={`/${_id}/edit`}>
                     <Button primary>Edit</Button>
                 </Link>
