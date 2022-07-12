@@ -17,11 +17,13 @@ const Products = ({products, productsA, productsB}) => {
             {user.nickname === 'boss' && (products.data?.map((product) => <Product key={product._id} product={product} /> ))}
         </div>
         <br />
+        {!(user.nickname === "boss") && 
         <div className="button-container" >
             <Link href="/new">
                 <Button primary >Add a new Product</Button>
             </Link>
-        </div>
+        </div>}
+        
     </div>
   )
 }
